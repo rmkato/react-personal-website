@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-width: 600px;
+  width: 100%;
+  background-color: #e7c9a987;
 }
 
-.App-link {
-  color: #61dafb;
+.contentContainer {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 40px;
+  min-height: calc(100vh - 298px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.header { 
+  font-family: "Alegreya Sans", Helvetica, Arial, sans-serif;
+}
+
+.headerJobTitle {
+  color: gray;
+}
+
+.card {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid rgb(156, 156, 156) !important;
+}
+
+.nav-link { 
+  color: rgb(65, 65, 65) !important;
+}
+
+.nav-link:hover {
+  border-color: rgb(65, 65, 65) !important;
+}
+
+.nav-link.active {
+  color: white !important;
+  background-color: rgb(65, 65, 65) !important;
+  border: none !important;
+}
+
+.general-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.general-link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #0a58ca;
+  transition: width .2s ease-in-out;
+}
+
+.general-link:hover:after {
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .contentContainer {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
   }
 }

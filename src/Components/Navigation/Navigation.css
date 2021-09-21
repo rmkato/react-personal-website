@@ -1,0 +1,39 @@
+.navItem {
+  color: white !important;
+  font-size: smaller !important;
+  position: relative;
+  display: inline-block;
+}
+
+.navItem:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width .3s ease-in-out;
+}
+
+.navItem:hover:after {
+  width: 100%;
+}
+
+.navbar-toggler-icon {
+  background-color: rgba(201, 201, 201, 0.25) !important;
+  border-radius: 3px;
+  margin-left: 60px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.nav-link {
+  display: inline-block !important;
+}
+
+.activeLink {
+  color: rgb(129, 183, 255) !important;
+}

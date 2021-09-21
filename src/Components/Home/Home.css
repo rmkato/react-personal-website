@@ -1,0 +1,163 @@
+.profilePicture {
+  padding: 30px;
+  border-radius: 50px;
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+  transition: 0.5s;
+}
+
+.profilePicture:hover {
+  padding: 20px;
+  border-radius: 0;
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
+.companyLogo {
+  vertical-align: baseline !important;
+}
+
+.companyLink {
+  position: relative;
+  display: inline-block;
+}
+
+.companyLink:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #0a58ca;
+  transition: width .2s ease-in-out;
+}
+
+.experienceDates {
+  color: darkslategray;
+  font-weight: normal;
+}
+
+.skillsIcon {
+  margin-top: 5%;
+  height: 75%;
+  width: 75%;
+  
+}
+
+.skillsCard {
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.skillsCard:hover {
+  padding-top: 0;
+  background-color: rgb(228, 228, 228);
+  transition: 0.4s;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 30%;
+}
+
+.sidebarLink {
+  position: relative;
+  display: inline-block;
+  text-align: right !important;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.sidebarLink:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: lightslategray;
+  transition: width .2s ease-in-out;
+}
+
+.companyLink:hover:after, .sidebarLink:hover:after {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1.2rem !important;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li:before {    
+  font-family: 'FontAwesome';
+  content: '\f105';
+  margin:0 5px 0 -15px;
+  color: slategray;
+}
+
+.verticalLineTop:before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin-left: 78px;
+  background-color: lightslategray;
+}
+
+.verticalLineBottom:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin-left: 78px;
+  background-color: lightslategray;
+}
+
+.hobbyImageContainer {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.hobbyImage {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.hobbyImage:hover {
+  filter: grayscale(100%);
+  opacity: 0.2;
+  transition: 0.4s ease-in-out;
+}
+
+.hobbyImageOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  color: white;
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+}
+
+
+@media screen and (max-width: 768px) {
+  .hobbyImageContainer {
+    padding-right: 10% !important;
+    padding-left: 10% !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    display: none !important;
+  }
+}
